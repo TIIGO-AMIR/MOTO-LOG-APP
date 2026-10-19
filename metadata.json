@@ -1,0 +1,6 @@
+{
+  "name": "Motorcycle Service Log",
+  "description": "Mobile and desktop application for motorcycle maintenance records, service history, and expenditure tracking in Ugandan Shillings (UGX).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
