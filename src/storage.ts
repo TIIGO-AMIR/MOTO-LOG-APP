@@ -80,7 +80,11 @@ export function loadMotorcycles(): Motorcycle[] {
       saveMotorcycles(SEED_MOTORCYCLES);
       return SEED_MOTORCYCLES;
     }
-    return JSON.parse(raw);
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed) && parsed.length > 0) {
+      return parsed;
+    }
+    return SEED_MOTORCYCLES;
   } catch (e) {
     console.error('Error loading motorcycles from storage:', e);
     return SEED_MOTORCYCLES;
@@ -102,7 +106,11 @@ export function loadServices(): ServiceRecord[] {
       saveServices(SEED_SERVICES);
       return SEED_SERVICES;
     }
-    return JSON.parse(raw);
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed) && parsed.length > 0) {
+      return parsed;
+    }
+    return SEED_SERVICES;
   } catch (e) {
     console.error('Error loading services from storage:', e);
     return SEED_SERVICES;
