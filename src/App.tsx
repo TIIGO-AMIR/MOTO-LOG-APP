@@ -22,6 +22,7 @@ import { ExpenditureSummary } from './components/ExpenditureSummary';
 import { MotorcycleModal } from './components/MotorcycleModal';
 import { ServiceModal } from './components/ServiceModal';
 import { ConfirmModal } from './components/ConfirmModal';
+import { PWAInstallBanner } from './components/PWAInstallBanner';
 import { CheckCircle2, AlertCircle, X } from 'lucide-react';
 
 export default function App() {
@@ -245,6 +246,8 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-6">
+        <PWAInstallBanner />
+
         {activeScreen === 'dashboard' && (
           <Dashboard
             motorcycles={motorcycles}
