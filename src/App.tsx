@@ -241,8 +241,6 @@ export default function App() {
         onNavigate={handleNavigate}
         motorcycleCount={motorcycles.length}
         serviceCount={services.length}
-        onOpenAddMotorcycle={handleOpenAddMotorcycle}
-        onOpenAddService={() => handleOpenAddService()}
       />
 
       {/* Main Content Area */}

@@ -1,14 +1,12 @@
 import React from 'react';
 import { ActiveScreen } from '../types';
-import { Bike, LayoutDashboard, Wrench, PieChart, Plus } from 'lucide-react';
+import { Bike, LayoutDashboard, Wrench, PieChart } from 'lucide-react';
 
 interface NavbarProps {
   activeScreen: ActiveScreen;
   onNavigate: (screen: ActiveScreen) => void;
   motorcycleCount: number;
   serviceCount: number;
-  onOpenAddMotorcycle: () => void;
-  onOpenAddService: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -16,8 +14,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   onNavigate,
   motorcycleCount,
   serviceCount,
-  onOpenAddMotorcycle,
-  onOpenAddService,
 }) => {
   return (
     <header className="bg-slate-900 border-b border-slate-800 text-white sticky top-0 z-40">
@@ -42,23 +38,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
           </div>
 
-          {/* Action Buttons (Desktop & Tablet) */}
-          <div className="flex items-center space-x-2 sm:space-x-3">
-            <button
-              onClick={onOpenAddMotorcycle}
-              className="px-3 py-1.5 text-xs sm:text-sm font-semibold rounded bg-slate-800 hover:bg-slate-700 text-slate-100 border border-slate-700 transition-colors flex items-center space-x-1.5"
-            >
-              <Plus className="w-4 h-4 text-emerald-400" />
-              <span>Add Motorcycle</span>
-            </button>
-            <button
-              onClick={onOpenAddService}
-              className="px-3 py-1.5 text-xs sm:text-sm font-semibold rounded bg-emerald-600 hover:bg-emerald-500 text-white transition-colors flex items-center space-x-1.5"
-            >
-              <Plus className="w-4 h-4 text-white" />
-              <span>Record Service</span>
-            </button>
-          </div>
         </div>
 
         {/* Desktop Screen Nav Tabs */}

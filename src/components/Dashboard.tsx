@@ -10,8 +10,6 @@ import {
   Calendar, 
   ChevronRight,
   TrendingUp,
-  FileCheck2,
-  Tag
 } from 'lucide-react';
 
 interface DashboardProps {
@@ -157,29 +155,6 @@ export const Dashboard: React.FC<DashboardProps> = ({
             </div>
             <p className="text-xs text-slate-500 mt-1">
               Average per maintenance visit
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Example Calculation Callout matching the documentation page 2 & 3 */}
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-        <div className="flex items-start space-x-3">
-          <div className="p-2 rounded bg-blue-700 text-white mt-0.5">
-            <FileCheck2 className="w-4 h-4" />
-          </div>
-          <div className="flex-1">
-            <div className="flex items-center justify-between flex-wrap gap-2">
-              <h3 className="text-sm font-bold text-blue-900">
-                Expenditure Calculation Engine
-              </h3>
-              <span className="text-xs bg-blue-100 text-blue-800 font-semibold px-2 py-0.5 rounded">
-                Dynamic Summation Active
-              </span>
-            </div>
-            <p className="text-xs text-blue-800 mt-1 leading-relaxed">
-              As defined in the specification, total servicing expenditure is continuously calculated by adding the costs of saved service entries in Ugandan Shillings (UGX).
-              Any addition, edit, or deletion automatically updates the overall and vehicle-specific totals.
             </p>
           </div>
         </div>
